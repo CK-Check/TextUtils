@@ -1,6 +1,6 @@
 {
-  "homepage": "https://CK-Check.github.io/CK-Check/TextUtils",
-  "name": "TextUtils",
+  "homepage": "https://CK-Check.github.io/TextUtils",
+  "name": "textutils",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

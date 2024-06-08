@@ -1,34 +1,38 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-export default function About() {
-    const [myStyle, setmyStyle] = useState(
-    {
-        color: 'black',
-        backgroundColor: 'white',
-    })
+export default function About(props) {
+    // const [myStyle, setmyStyle] = useState(
+    // {
+    //     color: 'black',
+    //     backgroundColor: 'white',
+    // })
 
-    const [btnText, setbtnText] = useState("Enable Dark mode");
+let myStyle = {
+  color: props.mode ==='dark'? 'white':'black',
+  backgroundColor: props.mode === 'dark'? '#787777': 'white',
+}
+    //const [btnText, setbtnText] = useState("Enable Dark mode");
 
-    const toggleStyle = () =>{
-        if(myStyle.color === 'white'){
-            setmyStyle({
-                color: 'black',
-                backgroundColor: 'white',
-            })
-        setbtnText("Enable Dark mode")
-        }
-        else{
-            setmyStyle({
-                color: 'white',
-                backgroundColor: 'black',
-                border: '0.25px solid white',
-            })
-        setbtnText("Enable Light mode")
-        }
-    }
+    // const toggleStyle = () =>{
+    //     if(myStyle.color === 'white'){
+    //         setmyStyle({
+    //             color: 'black',
+    //             backgroundColor: 'white',
+    //         })
+    //     setbtnText("Enable Dark mode")
+    //     }
+    //     else{
+    //         setmyStyle({
+    //             color: 'white',
+    //             backgroundColor: 'black',
+    //             border: '0.25px solid white',
+    //         })
+    //     setbtnText("Enable Light mode")
+    //     }
+    // }
 
   return (
-    <div className="container" style={myStyle}>
+    <div className="container py-2" style={myStyle}>
         <h2>About Us</h2>
       <div className="accordion" id="accordionPanelsStayOpenExample">
   <div className="accordion-item">
@@ -67,9 +71,6 @@ export default function About() {
       </div>
     </div>
   </div>
-</div>
-<div className='container  my-4'>
-    <button type="button" onClick={toggleStyle} className="btn btn-outline-secondary">{btnText}</button>
 </div>
     </div>
   )
