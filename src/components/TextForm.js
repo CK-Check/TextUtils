@@ -5,19 +5,29 @@ export default function TextForm(props) {
     const handleUpClick = ()=>{
         let newText = text.toUpperCase();
         setText(newText)
-        props.showAlert("Converted to Uppercase.", "success")
+        props.showAlert(": Converted to Uppercase.", "success")
     }
     const handleLowClick = ()=>{
         let newText = text.toLowerCase();
         setText(newText)
-        props.showAlert("Converted to Lowercase.", "success")
+        props.showAlert(": Converted to Lowercase.", "success")
     }
     const handleClearClick = ()=>{
         let newText ="";
         setText(newText)
+        props.showAlert(": Cleared", "danger")
     }
     const handleOnChange = (event)=>{
         setText(event.target.value);
+    }
+    const handleAutoCap = ()=>{
+        if(text){
+        let myArr = text.split(/\s+/);
+        let newText = myArr.map((word) => {
+            return (word[0].toUpperCase() + word.substring(1))
+        }).join(" ");
+        setText(newText)
+    }
     }
     const [text, setText] = useState("");
   return (
@@ -29,6 +39,7 @@ export default function TextForm(props) {
     </div>
     <button className="btn btn-secondary my-2" disabled={text.length===0} onClick={handleUpClick}>Convert To Uppercase</button>
     <button className="btn btn-secondary my-2 mx-2" disabled={text.length===0} onClick={handleLowClick}>Convert To Lowercase</button>
+    <button className="btn btn-secondary my-2 mx-2" disabled={text.length===0} onClick={handleAutoCap}>Auto-Capitalize</button>
     <button className="btn btn-secondary my-2" disabled={text.length===0} onClick={handleClearClick}>Clear</button>
     </div>
     <div className={`container my-2 text-${props.mode === 'light'? 'dark': 'light'}`}>

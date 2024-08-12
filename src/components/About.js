@@ -38,36 +38,36 @@ let myStyle = {
   <div className="accordion-item">
     <h2 className="accordion-header">
       <button className="accordion-button" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-        What is TextUtils?
+        <strong>What is TextUtils?</strong>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
       <div className="accordion-body" style={myStyle}>
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classNamees that we use to style each element. These classNamees control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        TextUtils provides you with the utility to upscale your language presentation game by providing you the tools to enchance your writing skill. We help with bulk tranformation of the document, from scaling the documents from uppercase to lowering it down to lowercase.
       </div>
     </div>
   </div>
   <div className="accordion-item">
     <h2 className="accordion-header">
       <button className="accordion-button collapsed" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-        Accordion Item #2
+        <strong>What is the thing that we can expect from these website?</strong>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse">
       <div className="accordion-body" style={myStyle}>
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classNamees that we use to style each element. These classNamees control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        We are here to serve with best possible utility tools to play around your text document so that you can have a emersive and professional experience. We have plan out to bring more features to this website in order to it be more functional and helpful to students as well as professionals in their day-to-day documentation.
       </div>
     </div>
   </div>
   <div className="accordion-item">
     <h2 className="accordion-header">
       <button className="accordion-button collapsed" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-        Accordion Item #3
+        <strong>Question 3...</strong>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" className="accordion-collapse collapse">
       <div className="accordion-body" style={myStyle}>
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classNamees that we use to style each element. These classNamees control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        Answer 3...
       </div>
     </div>
   </div>
